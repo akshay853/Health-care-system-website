@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>view customer</title>
+		<style>
+      * {
+  box-sizing: border-box;
+}
+td{
+            text-align: center;border-bottom: 1px solid #ddd;
+        }
+        tr:hover {background-color: #f5f5f5;}
+        tr:nth-child(even) {background-color: #f2f2f2;}
+        th {
+            background-color: #4CAF50;
+            color: white;
+            }
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 100%;
+  }
+}
+      .logincontent{
+	margin: 0 auto;
+	height: 500px;
+	width: 400px;
+	background-color: #818181;
+	border-radius: 10px;
+}
+
+.registercontent{
+	margin: 0 auto;
+	height: 720px;
+	width: 400px;
+	background-color: #818181;
+	border-radius: 10px;
+}
+
+.logintop{
+	height: 60px;
+	width: 400px;
+	background-color: #818181;
+	color: #ffffff;
+}
+
+.registertop{
+	height: 60px;
+	width: 400px;
+	background-color: #818181;
+	color: #ffffff;
+}
+
+.textbox{
+	padding: 10px 40px;
+	background-color: #818181;
+	border-radius: 10px;
+}
+
+::placeholder {
+	color: #FFFFFF;
+	opacity: 1;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.btn {
+	padding: 10px 40px;
+	background-color: #009933;
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.worddark{
+	color: #818181;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.wordlight{
+	color: #818181;
+	font-style: normal;
+	font-weight: bold;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Product Sans';
+}
+
+.one{
+	display: flex;
+	position: relative;
+}
+
+.one .two{
+	width: 225px;
+	height: 100%;
+	background: #707773;
+	padding: 30px 0px;
+	position: fixed;
+}
+
+.one .two h1{
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+	font-style: normal;
+	font-weight: bold;
+}
+		
+.one .two h2{
+	color: #fff;
+	text-align: center;
+}
+		
+.one .two .active{
+	background: #000000;
+}
+
+.one .two ul li{
+	text-align: center;
+	padding: 15px;
+	border-bottom: 0.1px solid white;
+	border-top: 0.1px solid white;
+}	
+
+.one .two ul li a{
+	color: #ffffff;
+	display: block;
+}
+
+.one .two ul li a .side{
+	width: 25px;
+	align:center;
+}
+
+.one .content{
+	width: 100%;
+	margin-left: 200px;
+}
+
+.one .content .topbar{
+	text-align: center;
+	padding: 20px;
+	background: #818181;
+	color: white;
+}
+		
+.one .content .contentbar{
+	margin: auto;
+                height: 282px;
+            }
+
+.one .content .contentbar h1{
+	color: #818181;
+	text-align: center;
+	font-style: normal;
+	font-weight: bold;
+}
+
+		</style>
+	</head>
+	<body bgcolor="#fbfdfc">
+		<div class="one">
+			<div class="two">
+				<h1>Homeway</h1>
+				<ul>
+					 <li><a  href="addowner.html">add owner</a></li>
+  <li><a href="addcategory.html">add category</a></li>
+  <li><a href="viewowner.html">View owner</a></li>
+  <li><a href="viewcustomer.html">view user</a></li>
+  <li><a href="viewcategory.html">View categories</a></li>
+  <li><a href="viewpayment.html">View Payment</a></li>
+  <li><a href="viewcomplaint.html">View complaints</a></li>
+  <li><a href="updatecustomer.html">update user</a></li>
+  <li><a href="viewcomplaint.html">Update Status</a></li>
+  <li><a href="Mainhome.html">Logout</a></li>
+				</ul>
+			</div>
+			<!-- <div class="content" align="center">
+				<div class="topbar">
+					<h2>view customer</h2>						
+				</div></br></br>
+				<div class="row">
+  <div class="column" style="background-color:#aaa;position: absolute; top: 129px; left: 293px;">
+  <h2>Customer 1</h2>
+  <p>               
+      <form action="" style="background-color: # #999999 ">
+                    <label>Customer id:</label>
+                    <input id="u_id" type="text" /><br /><br />
+                    <label>User name:</label>
+                    <input id="name" type="text" /><br /><br />
+                    <label>Phone number:</label>
+                    <input id="phone_no" type="text" /><br /><br />
+                    <label>Address:</label>
+                    <input id="address" type="text" /><br /><br />
+                    
+
+
+
+                </form>
+
+
+
+</p>
+  </div>
+  <div class="column" style="background-color:#bbb; position: absolute; top: 130px; left: 643px;">
+  <h2>Customer 2</h2>
+  <p>                
+      <form action="" style="background-color:  #999999">
+                    <label>Customer id:</label>
+                    <input id="Text1" type="text" /><br /><br />
+                    <label>User name:</label>
+                    <input id="Text2" type="text" /><br /><br />
+                    <label>Phone number:</label>
+                    <input id="Text3" type="text" /><br /><br />
+                    <label>Address:</label>
+                    <input id="Text4" type="text" /><br /><br />
+                
+
+
+
+                </form>
+
+
+
+</p>
+  </div>
+
+</div>
+				
+			</div> -->
+		
+		
+			<table style="width: 50%; height: 100%; margin-left: 30%; margin-top: 10%; border-collapse:collapse; border: 1px solid black; overflow-x: auto;">
+				<tr style="border: 1px solid black; background-color: rgb(173, 255, 173);">
+				  <th>Name</th>
+				  <th>Address</th>
+				  <th>phoneNumber</th>
+				</tr>
+				{% for value in data %}
+				<tr>
+				  <td>{{value['name']}}</td>
+				  <td>{{value['address']}}</td>
+				  <td>{{value['phone_no']}}</td>
+				  
+				</tr>
+				{% endfor%}
+			</table>
+		</div>
+	</body>
+    </html>

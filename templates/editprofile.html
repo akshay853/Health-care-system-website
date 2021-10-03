@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Edit profile</title>
+		<style>
+      * {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 100%;
+  }
+}
+      .logincontent{
+	margin: 0 auto;
+	height: 500px;
+	width: 400px;
+	background-color: #818181;
+	border-radius: 10px;
+}
+
+.registercontent{
+	margin: 0 auto;
+	height: 720px;
+	width: 400px;
+	background-color: #818181;
+	border-radius: 10px;
+}
+
+.logintop{
+	height: 60px;
+	width: 400px;
+	background-color: #818181;
+	color: #ffffff;
+}
+
+.registertop{
+	height: 60px;
+	width: 400px;
+	background-color: #818181;
+	color: #ffffff;
+}
+
+.textbox{
+	padding: 10px 40px;
+	background-color: #818181;
+	border-radius: 10px;
+}
+
+::placeholder {
+	color: #FFFFFF;
+	opacity: 1;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.btn {
+	padding: 10px 40px;
+	background-color: #009933;
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.worddark{
+	color: #818181;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.wordlight{
+	color: #818181;
+	font-style: normal;
+	font-weight: bold;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Product Sans';
+}
+
+.one{
+	display: flex;
+	position: relative;
+}
+
+.one .two{
+	width: 225px;
+	height: 100%;
+	background: #707773;
+	padding: 30px 0px;
+	position: fixed;
+}
+
+.one .two h1{
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+	font-style: normal;
+	font-weight: bold;
+}
+		
+.one .two h2{
+	color: #fff;
+	text-align: center;
+}
+		
+.one .two .active{
+	background: #000000;
+}
+
+.one .two ul li{
+	text-align: center;
+	padding: 15px;
+	border-bottom: 0.1px solid white;
+	border-top: 0.1px solid white;
+}	
+
+.one .two ul li a{
+	color: #ffffff;
+	display: block;
+}
+
+.one .two ul li a .side{
+	width: 25px;
+	align:center;
+}
+
+.one .content{
+	width: 100%;
+	margin-left: 200px;
+}
+
+.one .content .topbar{
+	text-align: center;
+	padding: 20px;
+	background: #818181;
+	color: white;
+}
+		
+.one .content .contentbar{
+	margin: auto;
+                height: 282px;
+            }
+
+.one .content .contentbar h1{
+	color: #818181;
+	text-align: center;
+	font-style: normal;
+	font-weight: bold;
+}
+
+		</style>
+	</head>
+	<body bgcolor="#fbfdfc">
+		<div class="one">
+			<div class="two">
+				<h1>Homeway</h1>
+				<ul>
+					<li><a href="home.html">Home</a></li>
+ <li><a  href="addowner.html">add payment</a></li>
+<li><a  href="addcomplaint.html">add complaint</a></li>
+  <li><a href="editprofile.html">edit profile</a></li>
+  <li><a href="viewpayment.html">view payment</a></li>
+  <li><a href="viewproperty.html">view property</a></li>
+  <li><a href="viewcategory.html">View complaint</a></li>
+  <li><a href="viewuserprofile">view userprofile</a></li>
+  <li><a href="viewcustomer.html">View customer</a></li>
+  <li><a href="updatecomplaints.html">update complaints</a></li>
+  <li><a href="updatepayment.html">update property</a></li>
+  <li><a href="Mainhome.html">Logout</a></li>
+				</ul>
+			</div>
+			<div class="content" align="center">
+				<div class="topbar">
+					<h2>Edit profile</h2>						
+				</div></br></br>
+				<div class="row">
+  <!-- <div class="column" style="background-color:#aaa;position: absolute; top: 129px; left: 293px;">
+  <h2>update1</h2>
+  <p>               
+       <form action="" style="background-color: #999999 text-align: center;">
+                    <label>Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input id="o_details" type="text" /><br /><br />
+                    <label>Address:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input id="loc" type="text" /><br /><br />
+                    <label>Phone number:</label>
+                    <input id="plot_size" type="text" /><br /><br />
+                    <label>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                    &nbsp;<input id="pro_des" type="text" /><br /><br />
+                    <input id="add" type="button" value="Edit" />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input id="save" type="button" value="Save" />
+
+
+                </form>
+
+</p>
+  </div> -->
+  <div class="column" style="background-color:#bbb; position: absolute; top: 130px; left: 643px;">
+  <h2>update2</h2>
+  <p>                
+      <form action="/saveprofile" style="background-color: #999999 text-align: center;" method="POST">
+                    <label>Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input id="Text1" type="text" name = "name" value = "{{data['name']}}"/><br /><br />
+                    <label>Address:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input id="Text2" type="text" name="add" value=" {{data['address']}}"/><br /><br />
+                    <label>Phone number:</label>
+                    <input id="Text3" type="text" name="phno" value="{{data['phone_no']}}"/><br /><br />
+                    <label>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                    &nbsp;<input id="Text4" type="text"name="pass" value="{{data['password']}}"/><br /><br />
+                    <input id="Button1" type="button" value="Edit" />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input id="Button2" type="submit" value="Save" />
+
+
+                </form>
+
+</p>
+  </div>
+
+</div>
+				
+			</div>
+		</div>
+	</body>
+    </html>
+

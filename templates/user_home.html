@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>House rent web app</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css/">
+<style>
+    body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+		<div class="sidenav">
+            <div class="two">
+				<img src="/static/images/LOGO.png" />
+  <a href="#about">Login</a>
+                 <button class="dropdown-btn">Complaint 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="/addcomplaint">Add complaint</a>
+    <a href="/viewcomplaint">view complaint</a>
+    <a href="/updatecomplaint">update complaint</a>
+  </div>
+<button class="dropdown-btn">Payment 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="/addpayment">Add payment</a>
+    <a href="/viewPayment">view payment</a>
+  </div>
+   <button class="dropdown-btn">Profile
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <!-- <a href="registration.html">Add profile</a> -->
+    <a href="/viewprofile">view profile</a>
+    <a href="/editprofile">edit profile</a>
+  </div>
+  <a href="/viewcategories">View category</a>
+
+  <a href="/">logout</a>
+</div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/static/images/homepage.jpg" style="width:1320px">
+    <div class="w3-display-bottom middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3></h3>
+      <p><b></b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/static/images/homepage.jpg" style="width:1320px">
+    <div class="w3-display-bottom middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3></h3>
+      <p><b></b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/static/images/homepage.jpg" style="width:1320px">
+    <div class="w3-display-bottom middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3></h3>
+      <p><b></b></p>    
+    </div>
+  </div>
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Online Home Rental System</h2>
+    <p class="w3-opacity"><i>We provides homes near by you</i></p>
+    <p class="w3-justify">We soon realized that it was necessary to go beyond basics and create a platform that could do much more than just solve the immediate problems of space and peripherals. With globalization and communication taking a forefront, we are aware that society is becoming more disparate. Our response to this is - No city should be a stranger; no person should feel discriminated.
+The philosophy behind our website grew to create an inclusive living environment where youth have choices but are also required to take ownership. Tenants would have options so that they could choose according to their budget and personal preferences. The burden on owners would get reduced - to look for responsible tenants, do background checks and chase after tenants to pay in their dues. In the future, we believe our websit as a platform will grow in many other directions, with housing as the core focus.</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>Tamil Nadu</p>
+        <img src="/static/images/ak_655_1830314020-1560854424_700x700.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Kerala</p>
+        <img src="/static/images/download.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Karnataka</p>
+        <img src="/static/images/east-duplex-villa-500x500.jpg" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+  </div>
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">New Rental House</h2>
+      <p class="w3-opacity w3-center"><i>search for suitable houses for you</i></p><br>
+
+      
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="/static/images/ak_655_1830314020-1560854424_700x700.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>1 bhk</b></p>
+            <p class="w3-opacity">Location:Kerala</p>
+            <p>Near Police station,Trivandrum</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="/static/images/east-duplex-villa-500x500.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>2 bhk</b></p>
+            <p class="w3-opacity">Location:Kerala</p>
+            <p>Near Airport,Kannur</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="/static/images/download.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>3 bhk</b></p>
+            <p class="w3-opacity">Location:Kerala</p>
+            <p>Near Post office,Ernakulam</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">�</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="#" target="_blank">House rent web app</a></p>
+</footer>
+
+<script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
